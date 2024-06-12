@@ -1,0 +1,7 @@
+.abstra
+
+__pycache__
+.venv
+.env
+*.pfx
+.DS_Store

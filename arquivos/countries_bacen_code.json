@@ -1,0 +1,938 @@
+[
+    {
+        "id": "00132",
+        "name": "Afeganistao"
+    },
+    {
+        "id": "00175",
+        "name": "Republica da albania"
+    },
+    {
+        "id": "00230",
+        "name": "Alemanha"
+    },
+    {
+        "id": "00310",
+        "name": "Burkina faso"
+    },
+    {
+        "id": "00370",
+        "name": "Andorra"
+    },
+    {
+        "id": "00400",
+        "name": "Angola"
+    },
+    {
+        "id": "00418",
+        "name": "Anguilla"
+    },
+    {
+        "id": "00434",
+        "name": "Antigua e barbuda"
+    },
+    {
+        "id": "00477",
+        "name": "Antilhas holandesas"
+    },
+    {
+        "id": "00531",
+        "name": "Arabia saudita"
+    },
+    {
+        "id": "00590",
+        "name": "Argelia"
+    },
+    {
+        "id": "00639",
+        "name": "Argentina"
+    },
+    {
+        "id": "00647",
+        "name": "Republica da armenia"
+    },
+    {
+        "id": "00655",
+        "name": "Aruba"
+    },
+    {
+        "id": "00698",
+        "name": "Australia"
+    },
+    {
+        "id": "00728",
+        "name": "Austria"
+    },
+    {
+        "id": "00736",
+        "name": "Republica do azerbaijao"
+    },
+    {
+        "id": "00779",
+        "name": "Ilhas bahamas"
+    },
+    {
+        "id": "00809",
+        "name": "Ilhas bahrein"
+    },
+    {
+        "id": "00817",
+        "name": "Bangladesh"
+    },
+    {
+        "id": "00833",
+        "name": "Barbados"
+    },
+    {
+        "id": "00850",
+        "name": "Republica da belarus"
+    },
+    {
+        "id": "00876",
+        "name": "Belgica"
+    },
+    {
+        "id": "00884",
+        "name": "Belize"
+    },
+    {
+        "id": "00906",
+        "name": "Bermudas"
+    },
+    {
+        "id": "00930",
+        "name": "Mianmar (birmania)"
+    },
+    {
+        "id": "00973",
+        "name": "Bolivia"
+    },
+    {
+        "id": "00981",
+        "name": "Bosnia-herzegovina (republica da)"
+    },
+    {
+        "id": "01015",
+        "name": "Botsuana"
+    },
+    {
+        "id": "01058",
+        "name": "Brasil"
+    },
+    {
+        "id": "01082",
+        "name": "Brunei"
+    },
+    {
+        "id": "01112",
+        "name": "Republica da bulgaria"
+    },
+    {
+        "id": "01155",
+        "name": "Burundi"
+    },
+    {
+        "id": "01198",
+        "name": "Butao"
+    },
+    {
+        "id": "01279",
+        "name": "Republica de cabo verde"
+    },
+    {
+        "id": "01376",
+        "name": "Ilhas cayman"
+    },
+    {
+        "id": "01414",
+        "name": "Camboja"
+    },
+    {
+        "id": "01457",
+        "name": "Camaroes"
+    },
+    {
+        "id": "01490",
+        "name": "Canada"
+    },
+    {
+        "id": "01504",
+        "name": "Canal, ilhas do (jersey e guernsey)"
+    },
+    {
+        "id": "01511",
+        "name": "Ilhas canarias"
+    },
+    {
+        "id": "01538",
+        "name": "Republica do cazaquistao"
+    },
+    {
+        "id": "01546",
+        "name": "Catar"
+    },
+    {
+        "id": "01589",
+        "name": "Chile"
+    },
+    {
+        "id": "01600",
+        "name": "Republica popular china"
+    },
+    {
+        "id": "01619",
+        "name": "Formosa (taiwan)"
+    },
+    {
+        "id": "01635",
+        "name": "Chipre"
+    },
+    {
+        "id": "01651",
+        "name": "Ilhas cocos(keeling)"
+    },
+    {
+        "id": "01694",
+        "name": "Colombia"
+    },
+    {
+        "id": "01732",
+        "name": "Ilhas comores"
+    },
+    {
+        "id": "01775",
+        "name": "Republica do congo"
+    },
+    {
+        "id": "01830",
+        "name": "Ilhas cook"
+    },
+    {
+        "id": "01872",
+        "name": "Rep.pop.democratica coreia"
+    },
+    {
+        "id": "01902",
+        "name": "Republica da coreia"
+    },
+    {
+        "id": "01937",
+        "name": "Costa do marfim"
+    },
+    {
+        "id": "01953",
+        "name": "Croacia (republica da)"
+    },
+    {
+        "id": "01961",
+        "name": "Costa rica"
+    },
+    {
+        "id": "01988",
+        "name": "Coveite"
+    },
+    {
+        "id": "01996",
+        "name": "Cuba"
+    },
+    {
+        "id": "02291",
+        "name": "Benin"
+    },
+    {
+        "id": "02321",
+        "name": "Dinamarca"
+    },
+    {
+        "id": "02356",
+        "name": "Ilha dominica"
+    },
+    {
+        "id": "02399",
+        "name": "Equador"
+    },
+    {
+        "id": "02402",
+        "name": "Egito"
+    },
+    {
+        "id": "02445",
+        "name": "Emirados arabes unidos"
+    },
+    {
+        "id": "02453",
+        "name": "Espanha"
+    },
+    {
+        "id": "02461",
+        "name": "Republica da eslovenia"
+    },
+    {
+        "id": "02470",
+        "name": "Republica eslovaca"
+    },
+    {
+        "id": "02496",
+        "name": "Estados unidos"
+    },
+    {
+        "id": "02518",
+        "name": "Republica da estonia"
+    },
+    {
+        "id": "02534",
+        "name": "Etiopia"
+    },
+    {
+        "id": "02550",
+        "name": "Falkland (ilhas malvinas)"
+    },
+    {
+        "id": "02593",
+        "name": "Ilhas feroe"
+    },
+    {
+        "id": "02674",
+        "name": "Filipinas"
+    },
+    {
+        "id": "02712",
+        "name": "Finlandia"
+    },
+    {
+        "id": "02755",
+        "name": "Franca"
+    },
+    {
+        "id": "02810",
+        "name": "Gabao"
+    },
+    {
+        "id": "02852",
+        "name": "Gambia"
+    },
+    {
+        "id": "02895",
+        "name": "Gana"
+    },
+    {
+        "id": "02917",
+        "name": "Republica da georgia"
+    },
+    {
+        "id": "02933",
+        "name": "Gibraltar"
+    },
+    {
+        "id": "02976",
+        "name": "Granada"
+    },
+    {
+        "id": "03018",
+        "name": "Grecia"
+    },
+    {
+        "id": "03050",
+        "name": "Groenlandia"
+    },
+    {
+        "id": "03093",
+        "name": "Guadalupe"
+    },
+    {
+        "id": "03131",
+        "name": "Guam"
+    },
+    {
+        "id": "03174",
+        "name": "Guatemala"
+    },
+    {
+        "id": "03255",
+        "name": "Guiana francesa"
+    },
+    {
+        "id": "03298",
+        "name": "Guine"
+    },
+    {
+        "id": "03310",
+        "name": "Guine-equatorial"
+    },
+    {
+        "id": "03344",
+        "name": "Guine-bissau"
+    },
+    {
+        "id": "03379",
+        "name": "Guiana"
+    },
+    {
+        "id": "03417",
+        "name": "Haiti"
+    },
+    {
+        "id": "03450",
+        "name": "Honduras"
+    },
+    {
+        "id": "03514",
+        "name": "Hong kong"
+    },
+    {
+        "id": "03557",
+        "name": "Republica da hungria"
+    },
+    {
+        "id": "03573",
+        "name": "Iemen"
+    },
+    {
+        "id": "03595",
+        "name": "Ilha de man"
+    },
+    {
+        "id": "03611",
+        "name": "India"
+    },
+    {
+        "id": "03654",
+        "name": "Indonesia"
+    },
+    {
+        "id": "03697",
+        "name": "Iraque"
+    },
+    {
+        "id": "03727",
+        "name": "Republica islamica do ira"
+    },
+    {
+        "id": "03751",
+        "name": "Irlanda"
+    },
+    {
+        "id": "03794",
+        "name": "Islandia"
+    },
+    {
+        "id": "03832",
+        "name": "Israel"
+    },
+    {
+        "id": "03867",
+        "name": "Italia"
+    },
+    {
+        "id": "03883",
+        "name": "Rep.fed.da iugoslavia"
+    },
+    {
+        "id": "03913",
+        "name": "Jamaica"
+    },
+    {
+        "id": "03964",
+        "name": "Ilhas johnston"
+    },
+    {
+        "id": "03999",
+        "name": "Japao"
+    },
+    {
+        "id": "04030",
+        "name": "Jordania"
+    },
+    {
+        "id": "04111",
+        "name": "Kiribati"
+    },
+    {
+        "id": "04200",
+        "name": "Rep.pop.democr.do laos"
+    },
+    {
+        "id": "04260",
+        "name": "Lesoto"
+    },
+    {
+        "id": "04278",
+        "name": "Republica da letonia"
+    },
+    {
+        "id": "04316",
+        "name": "Libano"
+    },
+    {
+        "id": "04340",
+        "name": "Liberia"
+    },
+    {
+        "id": "04383",
+        "name": "Libia"
+    },
+    {
+        "id": "04405",
+        "name": "Liechtenstein"
+    },
+    {
+        "id": "04421",
+        "name": "Republica da lituania"
+    },
+    {
+        "id": "04456",
+        "name": "Luxemburgo"
+    },
+    {
+        "id": "04472",
+        "name": "Macau"
+    },
+    {
+        "id": "04499",
+        "name": "Ant.rep.iugoslava - macedonia"
+    },
+    {
+        "id": "04502",
+        "name": "Madagascar"
+    },
+    {
+        "id": "04525",
+        "name": "Ilha da madeira"
+    },
+    {
+        "id": "04553",
+        "name": "Malasia"
+    },
+    {
+        "id": "04588",
+        "name": "Malavi"
+    },
+    {
+        "id": "04618",
+        "name": "Maldivas"
+    },
+    {
+        "id": "04642",
+        "name": "Mali"
+    },
+    {
+        "id": "04677",
+        "name": "Malta"
+    },
+    {
+        "id": "04723",
+        "name": "Marianas do norte"
+    },
+    {
+        "id": "04740",
+        "name": "Marrocos"
+    },
+    {
+        "id": "04766",
+        "name": "Ilhas marshall"
+    },
+    {
+        "id": "04774",
+        "name": "Martinica"
+    },
+    {
+        "id": "04855",
+        "name": "Mauricio"
+    },
+    {
+        "id": "04901",
+        "name": "Ilhas midway"
+    },
+    {
+        "id": "04936",
+        "name": "Mexico"
+    },
+    {
+        "id": "04944",
+        "name": "Republica da moldavia"
+    },
+    {
+        "id": "04952",
+        "name": "Monaco"
+    },
+    {
+        "id": "04979",
+        "name": "Mongolia"
+    },
+    {
+        "id": "04995",
+        "name": "Micronesia"
+    },
+    {
+        "id": "05010",
+        "name": "Ilhas montserrat"
+    },
+    {
+        "id": "05053",
+        "name": "Mocambique"
+    },
+    {
+        "id": "05070",
+        "name": "Namibia"
+    },
+    {
+        "id": "05088",
+        "name": "Nauru"
+    },
+    {
+        "id": "05118",
+        "name": "Christmas,ilha (navidad)"
+    },
+    {
+        "id": "05177",
+        "name": "Nepal"
+    },
+    {
+        "id": "05215",
+        "name": "Nicaragua"
+    },
+    {
+        "id": "05258",
+        "name": "Niger"
+    },
+    {
+        "id": "05282",
+        "name": "Nigeria"
+    },
+    {
+        "id": "05312",
+        "name": "Ilha niue"
+    },
+    {
+        "id": "05355",
+        "name": "Ilha norfolk"
+    },
+    {
+        "id": "05380",
+        "name": "Noruega"
+    },
+    {
+        "id": "05428",
+        "name": "Nova caledonia"
+    },
+    {
+        "id": "05452",
+        "name": "Papua nova guine"
+    },
+    {
+        "id": "05487",
+        "name": "Nova zelandia"
+    },
+    {
+        "id": "05517",
+        "name": "Vanuatu"
+    },
+    {
+        "id": "05568",
+        "name": "Oma"
+    },
+    {
+        "id": "05665",
+        "name": "Ilhas do (possessao dos eua) pacifico"
+    },
+    {
+        "id": "05738",
+        "name": "Paises baixos (holanda)"
+    },
+    {
+        "id": "05754",
+        "name": "Palau"
+    },
+    {
+        "id": "05762",
+        "name": "Paquistao"
+    },
+    {
+        "id": "05800",
+        "name": "Panama"
+    },
+    {
+        "id": "05860",
+        "name": "Paraguai"
+    },
+    {
+        "id": "05894",
+        "name": "Peru"
+    },
+    {
+        "id": "05932",
+        "name": "Ilha pitcairn"
+    },
+    {
+        "id": "05991",
+        "name": "Polinesia francesa"
+    },
+    {
+        "id": "06033",
+        "name": "Republica da polonia"
+    },
+    {
+        "id": "06076",
+        "name": "Portugal"
+    },
+    {
+        "id": "06114",
+        "name": "Porto rico"
+    },
+    {
+        "id": "06238",
+        "name": "Quenia"
+    },
+    {
+        "id": "06254",
+        "name": "Republica quirguiz"
+    },
+    {
+        "id": "06289",
+        "name": "Reino unido"
+    },
+    {
+        "id": "06408",
+        "name": "Republica centro-africana"
+    },
+    {
+        "id": "06475",
+        "name": "Republica dominicana"
+    },
+    {
+        "id": "06602",
+        "name": "Ilha reuniao"
+    },
+    {
+        "id": "06653",
+        "name": "Zimbabue"
+    },
+    {
+        "id": "06700",
+        "name": "Romenia"
+    },
+    {
+        "id": "06750",
+        "name": "Ruanda"
+    },
+    {
+        "id": "06769",
+        "name": "Federacao da russia"
+    },
+    {
+        "id": "06777",
+        "name": "Ilhas salomao"
+    },
+    {
+        "id": "06781",
+        "name": "Saint kitts e nevis"
+    },
+    {
+        "id": "06858",
+        "name": "Saara ocidental"
+    },
+    {
+        "id": "06874",
+        "name": "El salvador"
+    },
+    {
+        "id": "06912",
+        "name": "Samoa americana"
+    },
+    {
+        "id": "06955",
+        "name": "Ilhas sao cristovao e neves"
+    },
+    {
+        "id": "06971",
+        "name": "San marino"
+    },
+    {
+        "id": "07005",
+        "name": "Sao pedro e miquelon"
+    },
+    {
+        "id": "07056",
+        "name": "Sao vicente e granadinas"
+    },
+    {
+        "id": "07102",
+        "name": "Santa helena"
+    },
+    {
+        "id": "07153",
+        "name": "Santa lucia"
+    },
+    {
+        "id": "07200",
+        "name": "Ilhas sao tome e principe"
+    },
+    {
+        "id": "07285",
+        "name": "Senegal"
+    },
+    {
+        "id": "07315",
+        "name": "Seychelles"
+    },
+    {
+        "id": "07358",
+        "name": "Serra leoa"
+    },
+    {
+        "id": "07412",
+        "name": "Cingapura"
+    },
+    {
+        "id": "07447",
+        "name": "Republica arabe da siria"
+    },
+    {
+        "id": "07480",
+        "name": "Somalia"
+    },
+    {
+        "id": "07501",
+        "name": "Sri lanka"
+    },
+    {
+        "id": "07544",
+        "name": "Suazilandia"
+    },
+    {
+        "id": "07560",
+        "name": "Africa do sul"
+    },
+    {
+        "id": "07595",
+        "name": "Sudao"
+    },
+    {
+        "id": "07641",
+        "name": "Suecia"
+    },
+    {
+        "id": "07676",
+        "name": "Suica"
+    },
+    {
+        "id": "07706",
+        "name": "Suriname"
+    },
+    {
+        "id": "07722",
+        "name": "Republica do tadjiquistao"
+    },
+    {
+        "id": "07765",
+        "name": "Tailandia"
+    },
+    {
+        "id": "07820",
+        "name": "Territorio brit.oc.indico"
+    },
+    {
+        "id": "07838",
+        "name": "Djibuti"
+    },
+    {
+        "id": "07889",
+        "name": "Chade"
+    },
+    {
+        "id": "07919",
+        "name": "Republica tcheca"
+    },
+    {
+        "id": "07951",
+        "name": "Timor leste"
+    },
+    {
+        "id": "08001",
+        "name": "Togo"
+    },
+    {
+        "id": "08052",
+        "name": "Ilhas toquelau"
+    },
+    {
+        "id": "08109",
+        "name": "Tonga"
+    },
+    {
+        "id": "08150",
+        "name": "Trinidad e tobago"
+    },
+    {
+        "id": "08206",
+        "name": "Tunisia"
+    },
+    {
+        "id": "08230",
+        "name": "Ilhas turcas e caicos"
+    },
+    {
+        "id": "08249",
+        "name": "Republica do turcomenistao"
+    },
+    {
+        "id": "08273",
+        "name": "Turquia"
+    },
+    {
+        "id": "08281",
+        "name": "Tuvalu"
+    },
+    {
+        "id": "08311",
+        "name": "Ucrania"
+    },
+    {
+        "id": "08338",
+        "name": "Uganda"
+    },
+    {
+        "id": "08451",
+        "name": "Uruguai"
+    },
+    {
+        "id": "08478",
+        "name": "Republica do uzbequistao"
+    },
+    {
+        "id": "08486",
+        "name": "Est.da cidade do vaticano"
+    },
+    {
+        "id": "08508",
+        "name": "Venezuela"
+    },
+    {
+        "id": "08583",
+        "name": "Vietna"
+    },
+    {
+        "id": "08630",
+        "name": "Ilhas (britanicas) virgens"
+    },
+    {
+        "id": "08664",
+        "name": "Ilhas (e.u.a.) virgens"
+    },
+    {
+        "id": "08702",
+        "name": "Fiji"
+    },
+    {
+        "id": "08737",
+        "name": "Ilha wake"
+    },
+    {
+        "id": "08907",
+        "name": "Zambia"
+    },
+    {
+        "id": "08958", 
+        "name": "Zona do canal do panama"
+    }
+]

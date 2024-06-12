@@ -1,0 +1,82 @@
+{
+  "workspace": {
+    "id": null,
+    "name": "Untitled Workspace",
+    "theme": null,
+    "logo_url": null,
+    "brand_name": null,
+    "main_color": null,
+    "font_color": null,
+    "font_family": null
+  },
+  "visualization": [],
+  "kanban": {
+    "access_control": {
+      "is_public": false,
+      "required_roles": []
+    }
+  },
+  "home": {
+    "access_control": {
+      "is_public": true,
+      "required_roles": []
+    }
+  },
+  "jobs": [],
+  "hooks": [],
+  "forms": [
+    {
+      "id": "b90df8b8-5dd0-408f-9330-b4ceb83e5fb0",
+      "path": "send-invoice",
+      "title": "Send Invoice",
+      "is_initial": true,
+      "auto_start": false,
+      "allow_restart": false,
+      "end_message": "Obrigado",
+      "start_message": "Este formul\u00e1rio permite a gest\u00e3o completa das suas notas fiscais via Nota Carioca. Com ele, voc\u00ea pode realizar diversas opera\u00e7\u00f5es essenciais para o gerenciamento eficiente das suas notas, incluindo consulta, emiss\u00e3o e cancelamento.",
+      "error_message": null,
+      "welcome_title": "Gest\u00e3o de Notas Fiscais via Nota Carioca",
+      "timeout_message": null,
+      "start_button_text": "Iniciar",
+      "restart_button_text": null,
+      "file": "send_invoice.py",
+      "workflow_position": [
+        -276,
+        0
+      ],
+      "transitions": [
+        {
+          "target_id": "a834d837-dd7a-443f-a113-f7caa11825c2",
+          "target_type": "scripts",
+          "type": "forms:finished",
+          "id": "cxmhyr9",
+          "condition_value": null
+        }
+      ],
+      "notification_trigger": {
+        "variable_name": "assignee_emails",
+        "enabled": false
+      },
+      "access_control": {
+        "is_public": false,
+        "required_roles": []
+      }
+    }
+  ],
+  "scripts": [
+    {
+      "id": "a834d837-dd7a-443f-a113-f7caa11825c2",
+      "file": "send_email_with_invoice_link.py",
+      "title": "Send email with Invoice Link",
+      "is_initial": false,
+      "workflow_position": [
+        72.0,
+        0.0
+      ],
+      "transitions": []
+    }
+  ],
+  "iterators": [],
+  "conditions": [],
+  "version": "9.0"
+}
