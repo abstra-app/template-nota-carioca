@@ -1,6 +1,6 @@
 > **Note**: This repository and the majority of the documentation and code are in Portuguese, as it is a template applied to Brazil. However, contributions and questions in English are also welcome.
 
-# Projeto de Emissão de Notas Fiscais via Nota Carioca com ABSTRA
+# Projeto de Emissão de Notas Fiscais via Nota Carioca com Abstra
 
 Este projeto fornece um template para a emissão de notas fiscais eletrônicas através do sistema Nota Carioca, utilizando a biblioteca Abstra. O foco deste repositório é auxiliar desenvolvedores e empresas brasileiras a automatizar o processo de emissão de notas fiscais.
 
@@ -16,7 +16,7 @@ Para utilizar este projeto, é necessário realizar algumas configurações inic
    INVOICE_CERT_PASSWORD="senhaDoCertificado"
    ```
 
-3. **Tabela "invoices"**: É necessário criar uma tabela chamada `invoices` no seu banco de dados (tables) com as seguintes colunas:
+3. **Tabela "invoices"**: É necessário criar uma tabela chamada `invoices` no seu banco de dados da Abstra (tables) com as seguintes colunas:
 
    - `number_rps`: Número do RPS (Recibo Provisório de Serviços).
    - `serie_rps`: Série do RPS.
@@ -24,11 +24,15 @@ Para utilizar este projeto, é necessário realizar algumas configurações inic
 
 ## Uso
 
-Para emitir uma nota fiscal, utilize o form `send_invoice.py`. Este formulário é responsável por preparar e enviar os dados da nota fiscal para o sistema Nota Carioca através da Abstra.
+Para emitir uma nota fiscal, utilize o form "Send Invoice", arquivo `send_invoice.py`. Este formulário é responsável por preparar e enviar os dados da nota fiscal para o sistema Nota Carioca através da Abstra.
 
 ### send_invoice.py
 
 Este é o arquivo principal do projeto. Ele contém a lógica para enviar os dados da nota fiscal para o sistema Nota Carioca. Antes de executar este script, certifique-se de que todas as configurações iniciais foram realizadas corretamente.
+
+### send_email_with_invoice_link.py
+
+Este é o arquivo responsável pelo envio do link da nota emitida para o email cadastrado no formulário "Send Invoice".
 
 ## Contribuições
 
