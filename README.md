@@ -2,68 +2,70 @@
 
 # Projeto de Emissão de Notas Fiscais via Nota Carioca com Abstra
 
-Este projeto fornece um template para a emissão, cancelamento e busca de notas fiscais eletrônicas de serviços através do sistema Nota Carioca, utilizando a biblioteca Abstra. O foco deste repositório é auxiliar desenvolvedores e empresas brasileiras a automatizar esses processos.
+## Como Funciona
+
+Este projeto fornece um template para a emissão, cancelamento e busca de notas fiscais eletrônicas de serviços através do sistema Nota Carioca, utilizando Python e Abstra. O foco deste repositório é auxiliar desenvolvedores e empresas brasileiras a automatizar esses processos.
+
+Para customizar este template para o seu time e explorar ainda mais possibilidades, [agende uma demonstração aqui](https://meet.abstra.app/demo?url=template-nota-carioca).
 
 ## Configuração Inicial
 
 Para utilizar este projeto, é necessário realizar algumas configurações iniciais:
 
 1. **Certificado Digital A1**: É necessário possuir um certificado digital A1 válido. As credenciais deste certificado deverão ser configuradas no arquivo `.env` deste projeto.
-2. **Arquivo .env**: Crie um arquivo `.env` na raiz do projeto e adicione as seguintes variáveis com as credenciais do seu certificado digital A1:
+2. **Variáveis de ambiente**: Crie um arquivo `.env` na raiz do projeto e adicione as seguintes variáveis com as credenciais do seu certificado digital A1:
 
    ```ini
    INVOICE_CERT_PATH="caminho/para/o/seu/certificado.pfx"
    INVOICE_CERT_PASSWORD="senhaDoCertificado"
    ```
 
-3. **Tabela "invoices"**: É necessário criar uma tabela chamada `invoices` no seu banco de dados da Abstra (tables) com as seguintes colunas:
+3. **Dependências**: Para instalar as dependências necessárias para este projeto, um arquivo `requirements.txt` é fornecido. Este arquivo inclui todas as bibliotecas necessárias.
 
-   - `number_rps`: Número do RPS (Recibo Provisório de Serviços).
-   - `serie_rps`: Série do RPS.
-   - `batch_number`: Número do lote.
+   Siga estes passos para instalar as dependências:
 
-## Uso
+   1. Abra seu terminal e navegue até o diretório do projeto.
+   2. Execute o seguinte comando para instalar as dependências a partir do `requirements.txt`:
 
-Após realizar as configurações iniciais, siga os passos abaixo para começar a usar o projeto:
+      ```sh
+      pip install -r requirements.txt
+      ```
 
-1. Instale as dependências necessárias utilizando o pip. Abra o terminal e execute o seguinte comando:
+4. **Configuração de Tabelas**: Configure suas tabelas de banco de dados no Abstra Cloud Tables de acordo com o schema definido em `abstra-tables.json`.
+
+   Para criar automaticamente o schema da tabela, siga estes passos:
+
+   1. Abra seu terminal e navegue até o diretório do projeto.
+
+   2. Execute o seguinte comando para instalar o schema da tabela a partir de `abstra-tables.json`:
+      ```sh
+      abstra restore
+      ```
+
+   Para obter orientações sobre como criar e gerenciar tabelas no Abstra, consulte a [documentação do Abstra Tables](https://docs.abstra.io/cloud/tables).
+
+5. **Controle de Acesso**: O formulário gerado é protegido por padrão. Para testes locais, nenhuma configuração adicional é necessária. No entanto, para uso na nuvem, é necessário adicionar suas próprias regras de acesso.
+
+   Para obter mais informações sobre como configurar o controle de acesso, consulte a [documentação para controle de acesso da Abstra](https://docs.abstra.io/concepts/access-control).
+
+6. **Dependências**: Para acesso ao editor local com o projeto, utilize o seguinte comando:
 
    ```sh
-   pip install -r requirements.txt
+      abstra editor caminho/para/a/pasta/do/seu/projeto/
    ```
 
-2. Abra o projeto na Abstra utilizando o seguinte comando:
+## Funcionalidades
 
-   ```sh
-   abstra editor caminho/para/a/pasta/seu/projeto/
-   ```
-
-### Funcionalidades
-
-Este projeto oferece três funcionalidades principais: emitir, cancelar e buscar notas fiscais.
-
-#### Uso Geral
-
-Para interagir com as notas fiscais (emitir, cancelar e buscar), utilize o form Send Invoice, arquivo `send_invoice.py`. Este arquivo contém a lógica para as três funcionalidades:
+Este projeto oferece três funcionalidades principais: emitir, cancelar e buscar notas fiscais. Para interagir com as notas fiscais (emitir, cancelar e buscar), utilize o form Send Invoice, arquivo `send_invoice.py`. Este arquivo contém a lógica para as três funcionalidades:
 
 1. **Emissão de Notas Fiscais**: Envia os dados da nota fiscal para o sistema Nota Carioca.
 2. **Cancelamento de Notas Fiscais**: Envia uma solicitação de cancelamento para o sistema Nota Carioca.
 3. **Busca de Notas Fiscais**: Recupera informações de uma nota fiscal específica por período consultando o sistema Nota Carioca.
 
-### Arquivos Importantes
+## Arquivos Importantes
 
-#### send_invoice.py
+- **send_invoice.py**: Este é o arquivo principal do projeto. Ele contém a lógica para emitir, cancelar e buscar notas fiscais no sistema Nota Carioca. Dependendo da opção escolhida pelo usuário, ele executará a função correspondente.
 
-Este é o arquivo principal do projeto. Ele contém a lógica para emitir, cancelar e buscar notas fiscais no sistema Nota Carioca. Dependendo da opção escolhida pelo usuário, ele executará a função correspondente.
+- **send_email_with_invoice_link.py**: Este script é responsável pelo envio do link da nota emitida para o email cadastrado no formulário "Send Invoice".
 
-#### send_email_with_invoice_link.py
-
-Este script é responsável pelo envio do link da nota emitida para o email cadastrado no formulário "Send Invoice".
-
-## Como Funciona
-
-Este projeto permite a geração, cancelamento e busca de notas fiscais eletrônicas utilizando o sistema Nota Carioca. Ele automatiza os processos de criação do RPS, envio dos dados, cancelamento de notas emitidas e consulta de notas fiscais.
-
-## Contribuições
-
-Contribuições são bem-vindas! Se você deseja melhorar este projeto, sinta-se à vontade para criar um pull request.
+Se você estiver interessado em personalizar este template para a sua equipe em menos de 30 minutos, [agende uma sessão de personalização aqui.](https://meet.abstra.app/demo?url=template-nota-carioca)

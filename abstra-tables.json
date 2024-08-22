@@ -1,0 +1,53 @@
+{
+  "tables": [
+    {
+      "id": "d3088596-0258-4b74-906d-38075d79cb3a",
+      "name": "invoices",
+      "columns": [
+        {
+          "id": "125187dd-28c4-4533-ba72-13d9689a1c8a",
+          "name": "id",
+          "type": "uuid",
+          "nullable": false,
+          "unique": true,
+          "primaryKey": true,
+          "default": "gen_random_uuid()"
+        },
+        {
+          "id": "c765d906-840d-4578-85be-e6801e04278a",
+          "name": "created_at",
+          "type": "timestamp",
+          "nullable": false,
+          "unique": false,
+          "primaryKey": false,
+          "default": "now()"
+        },
+        {
+          "id": "4b212e9e-9287-480d-bd05-f5bacbb3f373",
+          "name": "number_rps",
+          "type": "int4",
+          "nullable": false,
+          "unique": false,
+          "primaryKey": false
+        },
+        {
+          "id": "5882a1d4-f14c-456d-8849-95d808f2cd9e",
+          "name": "serie_rps",
+          "type": "varchar",
+          "nullable": false,
+          "unique": false,
+          "primaryKey": false
+        },
+        {
+          "id": "9e23b18d-7f58-4bac-adcb-a0b27a0c9614",
+          "name": "batch_number",
+          "type": "int4",
+          "nullable": true,
+          "unique": false,
+          "primaryKey": false
+        }
+      ],
+      "data": []
+    }
+  ]
+}
