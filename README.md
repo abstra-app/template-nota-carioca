@@ -8,6 +8,8 @@ Este projeto fornece um template para a emissão, cancelamento e busca de notas 
 
 Para customizar este template para o seu time e explorar ainda mais possibilidades, [agende uma demonstração aqui](https://meet.abstra.app/demo?url=template-nota-carioca).
 
+![Um workflow de emissao de nota fiscal utilizando Abstra](https://github.com/user-attachments/assets/711a424f-a3c2-4d13-bede-cd97dc20ff40)
+
 ## Configuração Inicial
 
 Para utilizar este projeto, é necessário realizar algumas configurações iniciais:
@@ -48,7 +50,7 @@ Para utilizar este projeto, é necessário realizar algumas configurações inic
 
    Para obter mais informações sobre como configurar o controle de acesso, consulte a [documentação para controle de acesso da Abstra](https://docs.abstra.io/concepts/access-control).
 
-6. **Dependências**: Para acesso ao editor local com o projeto, utilize o seguinte comando:
+6. **Uso Local**: Para acesso ao editor local com o projeto, utilize o seguinte comando:
 
    ```sh
       abstra editor caminho/para/a/pasta/do/seu/projeto/
