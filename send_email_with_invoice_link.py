@@ -1,10 +1,12 @@
 from abstra.messages import *
 from abstra.workflows import *
+from abstra.tasks import get_trigger_task
 
-recipient_email = get_data("recipient_email")
-invoice_link = get_data("invoice_link")
+task = get_trigger_task()
+invoice_data = task.get_payload()
 
-print(f"Recipient email: {recipient_email}")
+recipient_email = invoice_data.get("recipient_email")
+invoice_link = invoice_data.get("invoice_link")
 
 def send_email_with_invoice_link(invoice_link, recipient_email):
     send_email(
@@ -14,4 +16,6 @@ def send_email_with_invoice_link(invoice_link, recipient_email):
     )
 
 if invoice_link and recipient_email:
+    print('Send Email')
     send_email_with_invoice_link(invoice_link, recipient_email)
+    task.complete()

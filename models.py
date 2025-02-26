@@ -2,7 +2,7 @@
 
 from abstra.forms import *
 from abstra.tables import *
-from abstra.workflows import *
+from abstra.tasks import send_task
 import flags
 from datetime import datetime
 import xmltodict
@@ -25,13 +25,14 @@ class ErrorMixin(object):
 
 
 class ResponseRPS(ErrorMixin):
-    def __init__(self, response=None, additional_data=[], in_process=False, multiple=False, env="sandbox", **kwargs):
+    def __init__(self, response=None, additional_data=[], in_process=False, multiple=False, env="sandbox", recipient_email=None, **kwargs):
         self.response = response
         self.nfse = None
         self.status = flags.NFSE_PROCESS["processing"]
         self.errors = []
         self.multiple = multiple
         self.env = env
+        self.recipient_email = recipient_email
         self.additional_data = additional_data
 
         if not in_process:
@@ -70,11 +71,10 @@ class ResponseRPS(ErrorMixin):
 
                 xml_dict = {"ConsultarNfseResposta": response}
                 response_xml = xmltodict.unparse(xml_dict)
-                NFSeLink(response_xml, self.env)
+                NFSeLink(response_xml, self.env, self.recipient_email)
 
         if response.get("ConsultarNfseResposta"):
             response = response["ConsultarNfseResposta"]
-            print(response)
             if response["ListaNfse"] == None:
                 display("NFSe não encontrada para este período.", end_program=True)
 
@@ -107,14 +107,14 @@ class ResponseRPS(ErrorMixin):
                         invoice_response["ConsultarNfseResposta"]["ListaNfse"]["CompNfse"] = invoice_response[
                             "ConsultarNfseResposta"]["ListaNfse"]["CompNfse"][index]
                         xml_response = xmltodict.unparse(invoice_response)
-                        NFSeLink(xml_response, self.env)
+                        NFSeLink(xml_response, self.env, self.recipient_email)
 
             else:
                 invoice_response = xmltodict.parse(self.response)
                 invoice_response["ConsultarNfseResposta"]["ListaNfse"]["CompNfse"] = invoice_response[
                     "ConsultarNfseResposta"]["ListaNfse"]["CompNfse"]
                 xml_response = xmltodict.unparse(invoice_response)
-                NFSeLink(xml_response, self.env)
+                NFSeLink(xml_response, self.env, self.recipient_email)
 
                 if response["ListaNfse"]["CompNfse"].get("NfseCancelamento"):
                     self.status = flags.NFSE_PROCESS["cancelled"]
@@ -178,10 +178,11 @@ class NFSeXML(object):
 
 
 class NFSeLink(object):
-    def __init__(self, response, env, **kwargs):
+    def __init__(self, response, env, recipient_email, **kwargs):
         self.response = response
         self.xml = None
         self.env = env
+        self.recipient_email = recipient_email
 
         self._get_link()
 
@@ -199,10 +200,20 @@ class NFSeLink(object):
         link_nfse_hom = f"https://notacariocahom.rio.gov.br/contribuinte/notaprint.aspx?nf={nf}&inscricao={ccm}&verificacao={cod}"
         link_to_nfse = f"https://notacarioca.rio.gov.br/contribuinte/notaprint.aspx?inscricao={ccm}&nf={nf}&verificacao={cod}"
         if self.env == "sandbox":
+            print('Sending Task')
+            send_task("invoice_data", 
+                      {"invoice_link": link_nfse_hom,
+                       "recipient_email": self.recipient_email
+                       })
+            
             display_link(
                 link_nfse_hom, link_text="Clique aqui para visualizar a NFSe de teste")
-            set_data("invoice_link", link_nfse_hom)
             
         else:
+            send_task("invoice_data", 
+                      {"invoice_link": link_to_nfse,
+                       "recipient_email": self.recipient_email
+                       })
+            
             display_link(link_to_nfse, link_text="Clique aqui para visualizar a NFSe")
-            set_data("invoice_link", link_to_nfse)
+            

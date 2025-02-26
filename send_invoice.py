@@ -1,6 +1,6 @@
 from abstra.forms import *
 from abstra.tables import *
-from abstra.workflows import *
+from abstra.tasks import send_task
 from abstra.common import get_persistent_dir
 
 import requests
@@ -24,7 +24,7 @@ from nota_carioca import NotaCarioca
 
 load_dotenv()
 
-env = 'production'
+env = 'sandbox' # Change to 'production' to send the invoice to the production environment
 
 try:
     original_city_list = requests.get(
@@ -425,7 +425,7 @@ def get_rps_status():
 def get_rps_cancel():
     city_code=str(3304557)
     cancel_codes = flags.CANCEL_CODE["codes"]
-    print(cancel_codes)
+    
     rps_cancel = Page().display('Please fill in the information for the RPS to be cancelled.')\
                        .read('CNPJ do Emissor')\
                        .read('Inscrição Municipal do Emissor')\
@@ -480,8 +480,6 @@ def send_invoice(env, certificate_path, pfx_password):
     cnpj_emitter=nfse['nfse']['emissor']['cnpj']
     recipient_email = nfse['nfse']['tomador']['email']
 
-    set_data("recipient_email", recipient_email)
-
 
     additional_data = {"rps_number": rps_number, "rps_batch_number": rps_batch_number,
                        "rps_serie": rps_serie, "amount": amount}
@@ -489,7 +487,7 @@ def send_invoice(env, certificate_path, pfx_password):
     certificate, key = load_public_key(certificate_path, pfx_password)
 
     nota = NotaCarioca(key=key, certificate=certificate,
-                       city_code=3304557, env=env, cnpj_emitter=cnpj_emitter, xml=xml)
+                       city_code=3304557, env=env, cnpj_emitter=cnpj_emitter, xml=xml, recipient_email=recipient_email)
 
     nota.send(additional_data_to_send=additional_data)
 
@@ -500,10 +498,10 @@ def get_invoice(env, certificate_path, pfx_password):
     xml = get_xml(nfse, consultar)
     certificate, key = load_public_key(certificate_path, pfx_password)
     cnpj_emitter=(nfse['nfse']['emissor']['cnpj']).replace(".", "").replace("/", "").replace("-", "")
-    print(cnpj_emitter)
+    
 
     nota = NotaCarioca(key=key, certificate=certificate,
-                       city_code=3304557, env=env, cnpj_emitter=cnpj_emitter, xml=xml)
+                       city_code=3304557, env=env, cnpj_emitter=cnpj_emitter, xml=xml, recipient_email=None)
     nota.status()
 
 
@@ -513,7 +511,7 @@ def cancel_invoice(env, certificate_path, pfx_password):
     certificate, key = load_public_key(certificate_path, pfx_password)
 
     nota = NotaCarioca(key=key, certificate=certificate,
-                       city_code=3304557, env=env, cnpj_emitter=nfse['nfse']['emissor']['cnpj'], xml=xml)
+                       city_code=3304557, env=env, cnpj_emitter=nfse['nfse']['emissor']['cnpj'], xml=xml, recipient_email=None)
     nota.cancel()
 
 
@@ -521,8 +519,7 @@ def cancel_invoice(env, certificate_path, pfx_password):
 def invoice():
     pfx_password = os.environ.get('INVOICE_CERT_PASSWORD')
     pfx_name = os.environ.get('INVOICE_CERT_NAME')
-    print(pfx_name)
-    print(pfx_password)
+    
     persistent_dir = get_persistent_dir()
     certificate_path = os.path.join(
         persistent_dir, pfx_name)

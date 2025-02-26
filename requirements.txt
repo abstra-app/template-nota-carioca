@@ -1,4 +1,4 @@
-abstra==2.25.4
+abstra==3.9.2
 requests==2.31.0
 cryptography==39.0.1
 xmlschema==2.2.1
@@ -8,3 +8,4 @@ xmltodict==0.13.0
 zeep==4.2.1
 lxml==4.9.2
 pandas
+urllib3==2.2.3

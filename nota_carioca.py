@@ -3,6 +3,21 @@ from zeep import Client
 from zeep.transports import Transport
 from requests import Session
 import zeep.plugins
+from requests.adapters import HTTPAdapter
+from urllib3.poolmanager import PoolManager
+import ssl
+
+class TLSAdapter(HTTPAdapter):
+    def init_poolmanager(self, connections, maxsize, block=False, **pool_kwargs):
+        ctx = ssl.create_default_context()
+        ctx.set_ciphers("HIGH:!DH:!aNULL")
+        ctx.options |= ssl.OP_NO_SSLv2
+        ctx.options |= ssl.OP_NO_SSLv3
+        ctx.options |= ssl.OP_NO_COMPRESSION
+        ctx.options |= ssl.OP_NO_TLSv1
+        ctx.options |= ssl.OP_NO_TLSv1_1
+        self.poolmanager = PoolManager(
+            num_pools=connections, maxsize=maxsize, block=block, ssl_context=ctx)
 
 
 class NotaCarioca(object):
@@ -14,6 +29,7 @@ class NotaCarioca(object):
         self.env = kwargs.pop("env")
         self.cnpj_emitter = kwargs.pop("cnpj_emitter")
         self.xml = kwargs.pop("xml")
+        self.recipient_email = kwargs.pop("recipient_email")
         self.base_url = flags.URL[self.city_code][self.env]
 
     def _get_credentials(self, credential):
@@ -32,6 +48,7 @@ class NotaCarioca(object):
             session.cert = cert
 
         cache = None
+        session.mount('https://', TLSAdapter())
 
         transport = Transport(session=session, cache=cache)
 
@@ -44,7 +61,7 @@ class NotaCarioca(object):
     def send(self, additional_data_to_send, multiple_rps=False):
         client = self._get_client()
         client_response = client.service.GerarNfse(self.xml)
-        return models.ResponseRPS(response=client_response, additional_data=additional_data_to_send, multiple=multiple_rps, env=self.env)
+        return models.ResponseRPS(response=client_response, additional_data=additional_data_to_send, multiple=multiple_rps, env=self.env, recipient_email=self.recipient_email)
 
     def status(self, nfse=False):
         if nfse:
